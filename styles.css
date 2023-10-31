@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+   --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --text-primary:hsl(0, 0%, 95%);
+    --text-secondary:hsla(0, 0%, 100%, 0.75);
+
+    --radius-size:0.3rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+body{
+    background-color: var(--text-primary);
+}
+
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    width: 90vw;
+    margin: 20% auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-secondary);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+p{
+    line-height: 20px;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--text-primary);
+}
+
+.sedan{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: var(--radius-size);
+    border-top-right-radius: var(--radius-size);
+    
+}
+
+.suv{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+    border-bottom-right-radius: var(--radius-size);
+    border-bottom-left-radius: var(--radius-size);
+}
+
+button{
+    width:130px;
+    display: inline-block;
+    align-self: right;
+    color: var(--Bright-orange);
+    padding: 1rem;
+    border: 2px white solid;
+    border-radius: 2rem;
+    margin-bottom: 10px;
+
+}
+
+.suv button{
+    color: var(--Dark-cyan);
+}
+
+.luxury button{
+    color: var(--Very-dark-cyan);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--Bright-orange);
+    color: white;
+}
+
+.suv>button:hover{
+    background-color: var(--Dark-cyan);
+}
+.luxury>button:hover{
+    background-color: var(--Very-dark-cyan);
+}
+
+
+@media (min-width: 375px) {
+    .grid{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .card{
+        padding: 3rem;
+        gap: 2rem;
+        max-width: 225px;
+    }
+    button{
+        margin: 10px 0;
+    }
+
+    .luxury{
+        border-radius: 0;
+        border-bottom-right-radius: var(--radius-size);
+        border-top-right-radius: var(--radius-size);
+    }
+    .sedan{
+        border-radius: 0;
+        border-bottom-left-radius: var(--radius-size);
+        border-top-left-radius: var(--radius-size);
+    }
+}
